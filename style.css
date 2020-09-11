@@ -1,0 +1,46 @@
+div {
+  margin: 10px;
+}
+
+#storyContainer {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background: black;
+}
+
+#titleContainer {
+  color: white;
+  font-family: monospace;
+  font-size: x-large;
+}
+
+#captionContainer {
+  font-family: Cursive;
+  color: white;
+}
+
+#imageContainer img {
+  width: 100%;
+  border-radius: 10px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#choicesContainer {
+  color: yellow;
+}
+
+#toolsContainer {
+  visibility: hidden;
+  opacity: 20%;
+}
