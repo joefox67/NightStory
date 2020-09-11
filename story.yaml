@@ -1,0 +1,200 @@
+#<br/> <br/> are breaks
+Title: Town of The Void
+Start: Backgammon
+
+
+
+Scenes:
+
+###
+#EggBert dialog
+###
+  Backgammon:
+  
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20eggbert.jpg?v=1580770184616
+    Caption: You wake up after a terrible spaceship crash grumbling about how you should have listened to your captain and not plunged into the worm hole. Upon looking up you see a strange creature with a bowler hat.
+    #Choices: [{text: "lets go here", target: OOF}]
+    Choices:
+      - text: "Introduce yourself"
+        target: Eddberts-talk
+      - text: "Screem and run into town"
+        target: Town
+    
+  Eddberts-talk:
+  
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20eggbert.jpg?v=1580770184616
+    Caption: Hello there alien, my name is Eggbert and this is my cabbage farm. Can I offer you something to clean all that mud off ya?
+    Choices: 
+      - text: "Sure"
+        target: Lava-Soap
+      - text: "No, Im fine"
+        target: NoLava-Soap
+        
+        
+  Lava-Soap:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20eggbert.jpg?v=1580770184616
+    Caption: Here is some lava soap for ya. 
+              (You use the lava soap and it feels like your scraping the skin off. 
+              It was very effective on the dirt though.)
+    Choices: 
+      - text: "Where am I?"
+        target: General-Lore
+        
+  Eddberts-home:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20eggbert.jpg?v=1580770184616
+    Caption: At least come inside before dark. Thats when the horror come out. Ill tell you about our realm.
+    Choices: 
+      - text: "Sure"
+        target: General-Lore
+      - text: "No, Ill be fine exploring in the dark."
+        target: Elderich-Horror
+      - text: "Ill head to town and find a room for the night"
+        target: Town
+  
+        
+  NoLava-Soap:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20eggbert.jpg?v=1580770184616
+    Caption: At least come inside before dark. Thats when the horror come out. Ill tell you about our realm.
+    Choices: 
+      - text: "Sure"
+        target: General-Lore
+      - text: "No, Ill be fine exploring in the dark."
+        target: Elderich-Horror
+      - text: "Ill head to town and find a room for the night"
+        target: Town
+####        
+#Barista's dialog
+####        
+  Barista:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2FBaresta%202.jpg?v=1580770182058
+    Caption: You enter a 1930s Art Deco style diner with a Barista standing at the counter.
+    Choices:
+      - text: "What is this dimension?"
+        target: General-Lore
+      - text: "Places around town?"
+        target: Town-Info
+        
+  Town-Info:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2FBaresta%202.jpg?v=1580770182058
+    Caption: She tells you about the elder lives in the tutor manor in the old part of town (not that you know what is old or new in here), she says the garden has some strange plants guarded by an invisible man. She is 
+              regretful there are no hotels.
+    Choices:
+      - text: "Back to town"
+        target: Town
+  
+    
+  ###   
+  # Elder text
+  ###
+  Elder:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20old%20man.png?v=1580770183452
+    Caption: When you enter his house you hear some one ask [Is there someone New?] you look behind you and an old
+             man is starting at you glumlly.
+    Choices:
+      - text: "Who are you and what is this Limbo?"
+        target: Elder-Lore
+      - text: "How do I get out of this nightmare?"
+        target: Elder-NightFall
+  
+  Elder-NightFall:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20old%20man.png?v=1580770183452
+    Caption: I will tell you that tommorrow. We must sleep during the night or else the monsters will try to kill us.
+    Choices:
+      - text: "So be it."
+        target: Elder-GardenInfo
+      - text: "Forget it, Ill head to the garden district now"
+        target: Elderich-Horror
+    
+  Elder-Lore:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20old%20man.png?v=1580770183452
+    Caption: A long time ago I tried to gain eternal life and I used a dark ritual to do so. It worked but now I am teatherd to the world between
+             worlds and can never leave. In my eariler years I tried to escape using a strange plant in what is now the garden district.
+             It just opened portals to other world and then people and things just kept coming in. I guess im the ruler or mayor.
+             People just built a town around my house and this town is born.
+    Choices:
+      - text: "How do I get out of this nightmare?"
+        target: Elder-NightFall
+        
+  Elder-GardenInfo:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2Finverted%20old%20man.png?v=1580770183452
+    Caption: In the morning the old man tells you that the guard in the garden district has a riddle 
+             and the answer is sub-C. You dont know what that means but you will use it anyway.
+    Choices:
+      - text: "Head back to town"
+        target: Town
+####        
+#Garden and the Guard  and the plant      
+#### 
+  Garden:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2FInvisible%20man.jpg?v=1580770183806
+    Caption: As you approach the Garden District you are stopped by floating cloths. He askes {Which of the following batteries does not belong? If you fail you cant get in.} It is clear
+              That night is almost appoaching and if you fail you will be stuck in darkness.
+    Choices:
+      - text: AAAA
+        target: Elderich-Horror
+      - text: AAA
+        target: Elderich-Horror
+      - text: AA
+        target: Elderich-Horror
+      - text: A
+        target: Elderich-Horror
+      - text: B
+        target: Elderich-Horror
+      - text: BB
+        target: Elderich-Horror
+      - text: C
+        target: Elderich-Horror
+      - text: Sub-C
+        target: Plant
+      - text: D
+        target: Elderich-Horror
+      - text: N
+        target: Elderich-Horror
+      - text: E
+        target: Elderich-Horror
+  Plant:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2FPant.jpg?v=1580770184233
+    Caption: A plant is in the green house and it opens its jaw to beccon you inside.
+    Choices:
+      - text: "Looks like I dont have much of a choice"
+        target: GoodEnding
+  ###
+  #Endings & reused Dialog
+  ###
+  
+  GoodEnding:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2FPant.jpg?v=1580770184233
+    Caption: As you fly through the plant at an ever quicker pace, you start to see familar colors ahead of you. When you arive you dont know where you are, but at least you are free.
+    Choices: []
+    
+    
+  Elderich-Horror:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2FMonster.jpg?v=1580770182740
+    Caption: Something approaches from the darkness_ Creating a noise so undescribely horrifying that brings you to 
+             your knees instantly. I creeps closely in a shuffling and seriptious manor. You hope and pray for
+             salvation. But you parish in the void of beings stomache.
+    Choices: []
+        
+  General-Lore:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2FIMG_20200202_230059.jpg?v=1580764992684
+    Caption: This world is an unstable one that opens portals to random world. 
+             Some have been a boon like the one that gave us electricty and stupendus scientific advances
+             while also realeaseing plauges and horror. The worlds people all fell here
+             like you and I except the elder who was born into this place. You should talk to him in Town.
+    Choices: 
+      - text: "You leave for town"
+        target: Town
+  
+  Town:
+    ImageURL: https://cdn.glitch.com/084b829f-c638-4a5c-80fe-6488b782deb0%2FIMG_20200202_230059.jpg?v=1580764992684
+    Caption: The center of town is extremely foggy. Every building is completely distinct from each other. You see
+             old buildings that look unlike anything in the history books and futruistic buildings you cant even begin to 
+             decern the purpose of. You stand in the center of town around a very minimalistic fountain.
+    Choices:
+      - text: "go toward the coffee house"
+        target: Barista
+      - text: "go to the garden"
+        target: Garden
+      - text: "go to the Elders house"
+        target: Elder
+  
